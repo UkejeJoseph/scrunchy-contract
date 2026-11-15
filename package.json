@@ -1,0 +1,30 @@
+{
+  "name": "scrunchy-contract",
+  "version": "0.1.0",
+  "description": "Scrunchy Smart Contracts",
+  "scripts": {
+    "test": "anchor test",
+    "build": "anchor build",
+    "deploy": "anchor deploy",
+    "lint": "cargo fmt --all && cargo clippy --all-targets"
+  },
+  "keywords": [
+    "solana",
+    "anchor",
+    "nft",
+    "marketplace",
+    "gaming"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@coral-xyz/anchor": "^0.31.0",
+    "@solana/web3.js": "^1.87.6",
+    "@types/node": "^20.10.0",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^5.3.3"
+  }
+}
+
