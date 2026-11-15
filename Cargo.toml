@@ -1,0 +1,21 @@
+[workspace]
+members = [
+    "programs/asset-registry",
+    "programs/marketplace",
+    "programs/access-control",
+]
+resolver = "2"
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+
+[profile.release.build-override]
+opt-level = 3
+incremental = false
+codegen-units = 1
+
+# Note: Anchor 0.31.0 and 0.32.1 have known dependency conflicts
+# If you encounter issues, consider using Anchor 0.29.0 or wait for fixes
+
