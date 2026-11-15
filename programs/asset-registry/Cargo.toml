@@ -1,0 +1,26 @@
+[package]
+name = "asset-registry"
+version = "0.1.0"
+description = "Scrunchy Asset Registry Program"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "asset_registry"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+idl-build = ["anchor-lang/idl-build"]
+default = []
+
+[dependencies]
+anchor-lang = "0.31.0"
+# Use only token feature to avoid solana-program version conflict
+# Note: associated_token feature causes dependency conflicts in 0.31.0
+anchor-spl = { version = "0.31.0", default-features = false, features = ["token"] }
+spl-token = "7.0.0"
+mpl-token-metadata = "4.1.1"
+
