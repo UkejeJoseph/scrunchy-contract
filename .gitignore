@@ -1,0 +1,39 @@
+# Rust
+target/
+**/*.rs.bk
+# Note: Cargo.lock should be committed for programs (not libraries)
+# Uncomment the line below if you want to ignore Cargo.lock
+# Cargo.lock
+
+# Anchor
+.anchor/
+test-ledger/
+.DS_Store
+
+# IDL
+target/idl/
+target/types/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Test
+.nyc_output/
+coverage/
+
