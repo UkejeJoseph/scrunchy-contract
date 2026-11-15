@@ -1,0 +1,61 @@
+feat: initial implementation of Scrunchy smart contracts with deployment automation
+
+Implement complete Solana Anchor-based smart contract system for decentralized
+game asset marketplace with comprehensive deployment tooling and documentation.
+
+Smart Contracts (3 Anchor Programs):
+- Asset Registry: Manages game asset creation, metadata, ownership tracking,
+  and asset transfers with NFT support
+- Marketplace: Handles asset listings, rental agreements, escrow payments,
+  and revenue distribution (owner/platform/game)
+- Access Control: Provides fast ownership and rental verification optimized
+  for SDK integration
+
+Deployment & Automation Scripts:
+- auto-airdrop-sol.sh: Automated SOL airdrop with multi-RPC endpoint support,
+  local validator integration, and rate limit handling
+- calculate-deployment-costs.sh: Calculate exact deployment costs per program
+  using Solana CLI rent calculations
+- deploy-devnet.sh: Automated devnet deployment with verification
+- deploy-individual.sh: Deploy programs individually with retry logic for
+  handling RPC issues
+- start-local-validator.sh: Start local Solana validator for testing
+
+Documentation (23 files):
+- Deployment guides: DEPLOY_TO_DEVNET.md, DEPLOY_QUICK_REF.md,
+  DEPLOYMENT_COSTS.md, DEPLOYMENT_ERROR_FIX.md
+- SOL management: DEVNET_AIRDROP_RULES.md, AUTO_AIRDROP_GUIDE.md,
+  README_AIRDROP.md
+- Setup & troubleshooting: SETUP_SUMMARY.md, WSL2_DNS_FIX.md,
+  DNS_ERROR_FIX.md, BUILD_STATUS.md
+- Anchor version management: ANCHOR_VERSION_ISSUE.md, ANCHOR_0.30_STATUS.md,
+  UPGRADE_TO_0.31.md, FIXED_ANCHOR_STATUS.md
+- IDL management: IDL_EXPLANATION.md, IDL_FIXED.md, FIX_IDL_GENERATION.md,
+  BACKEND_IDL_SETUP.md
+- Reference: SOLANA_VS_ETHEREUM.md, QUICK_ANSWERS.md,
+  DEPENDENCY_CONFLICT_FIX.md
+
+Configuration:
+- Anchor.toml: Configured for Anchor 0.31.0 with devnet program IDs
+- Cargo.toml: Workspace configuration with all dependencies
+- .gitignore: Proper Rust/Anchor/Node.js ignore patterns
+- TypeScript config for tests
+
+Testing:
+- Basic test suite setup with Anchor test framework
+- TypeScript test configuration
+
+Deployment Status:
+- Successfully deployed all 3 programs to Solana devnet
+- Program IDs configured and verified:
+  * Marketplace: G46EH6LskmJpBTvZNewSL4Xe5fkdbcdkMpRM8wQ9T3RH
+  * Asset Registry: 7vxpftgcdbh6NW77uAGVxp4aM2RcbQtmeGixNp2ifCDn
+  * Access Control: n41USxoi9Lf1RyZUVAfCHD5TSeuDBuqDxEpUHzkDqf2
+
+Project Organization:
+- Organized documentation into docs/ folder with index
+- All scripts in scripts/ folder
+- Clean root directory structure
+
+Breaking Changes: None (initial implementation)
+
