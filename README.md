@@ -1,3 +1,5 @@
+> **Maintained by [Joseph Ukeje](https://github.com/UkejeJoseph)**
+
 # Scrunchy Smart Contracts
 
 Solana Anchor programs for the Scrunchy decentralized game asset marketplace.
